@@ -77,7 +77,7 @@ function my_keydown(e)
 function up()
 {
 	//Define function to move the car upward
-	if(greencar_y>=38){
+	if(greencar_y>=0){
 		greencar_y=greencar_y-10;
 		console.log("When up arrow is pressed, x="+greencar_x + "| y"+greencar_y);
 		uploadBackground();
@@ -89,7 +89,7 @@ function up()
 function down()
 {
 	//Define function to move the car downward
-	if(greencar_y>=40){
+	if(greencar_y<=300){
 		greencar_y=greencar_y+10;
 		console.log("When down arrow is pressed, x="+greencar_x + "| y"+greencar_y);
 		uploadBackground();
@@ -101,8 +101,8 @@ function down()
 function left()
 {
 	//Define function to move the car left side
-	if(greencar_x>=37){
-		greencar_x=greencar_x+10;
+	if(greencar_x>=0){
+		greencar_x=greencar_x-10;
 		console.log("When left arrow is pressed, x="+greencar_x + "| y"+greencar_y);
 		uploadBackground();
 		uploadgreencar();
@@ -113,9 +113,9 @@ function left()
 function right()
 {
 	//Define function to move the car right side
-	if(greencar_x>=40){
-		greencar_x=greencar_x-10;
-		onsole.log("When up right is pressed, x="+greencar_x + "| y"+greencar_y);
+	if(greencar_x<=700){
+		greencar_x=greencar_x+10;
+		console.log("When up right is pressed, x="+greencar_x + "| y"+greencar_y);
 		uploadBackground();
 		uploadgreencar();
 
